@@ -1,0 +1,1350 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url(/assets/fonts/Georgia\ \(1\).ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    font-family: 'Georgia';
+}
+
+.start-screen {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 908px;
+    position: relative;
+}
+
+.start-screen img {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 908px;
+}
+
+.navigation {
+    position: absolute;
+    width: 1200px;
+    height: 60px;
+    left: calc(50% - 1200px/2);
+    top: 60px;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.house {
+    position: absolute;
+    width: 194px;
+    height: 35px;
+    left: 0px;
+    top: calc(30% - 35px/2 - 18.5px);
+    letter-spacing: 0.1em;
+    color: #F1CDB3;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 110%;
+}
+
+.house a {
+    text-decoration: none;
+    color: #F1CDB3;
+}
+
+.boston {
+    position: absolute;
+    width: 199px;
+    height: 15px;
+    /* left: 4px; */
+    /* top: calc(50% - 15px/2 + 22.5px); */
+    top: 30px;
+    left: -4px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 15px;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    margin-top: 19px;
+}
+
+.links {
+    margin-right: 20px;
+}
+
+.links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.links ul li {
+    list-style: none;
+    color: white;
+    padding: 0.1rem 0.7rem;
+    align-items: center;
+    right: 95px;
+    top: 16px;
+    font-family: 'Georgia', sans-serif;
+}
+
+.links ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 0.2rem;
+}
+
+.links ul li a:hover {
+    color: rgba(255, 255, 255, 0.635);
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.377);
+}
+
+.people-house {
+    position: absolute;
+    height: 322px;
+    width: 460px;
+    margin-top: 343px;
+    /* border: 2px solid white; */
+    left: calc(50% - 1200px/2);
+}
+
+.people-house h2 {
+    /* position: absolute; */
+    width: 310px;
+    height: 114px;
+    left: calc(50% - 310px/2 - 75px);
+    bottom: 208px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 1px;
+}
+
+.little-text {
+    width: 460px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.little-text p {
+    color: #CDCDCD;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 160%;
+    display: flex;
+    margin-top: 0px;
+}
+
+.friend-button {
+    align-items: center;
+    padding: 15px 45px;
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    left: calc(50% - 207px/2 - 126.5px);
+    bottom: 0px;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.friend-button p {
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    color: black;
+    margin-left: 11px;
+    margin-top: -2.8px;
+}
+
+.friend-button:hover {
+    background-color: #f1cdb381;
+    box-shadow: 2px 2px #f1cdb34e;
+}
+
+.people-house img {
+    position: absolute;
+    width: 698px;
+    height: 728px;
+    left: calc(90% - 298px/2 + 251px);
+    margin-top: -170px;
+}
+
+.about-page {
+    position: relative;
+    width: 1240px;
+    height: 588px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.about-content {
+    position: absolute;
+    width: 1200px;
+    height: 408px;
+    left: calc(50% - 1200px/2);
+    top: calc(50% - 408px/2 - 10px);
+    /* border: 2px solid black; */
+}
+
+.about-content img {
+    position: absolute;
+    width: 300px;
+    height: 408px;
+    left: 175px;
+    top: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.about-content img:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    position: absolute;
+    width: 430px;
+    height: 380px;
+    left: 595px;
+    top: 14px;
+    /* border: 2px solid gold; */
+}
+
+.content h3 {
+    position: absolute;
+    width: 370px;
+    height: 90px;
+    left: 0px;
+    top: -30px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.txt1 {
+    position: absolute;
+    width: 430px;
+    height: 96px;
+    left: 0px;
+    top: 115px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+}
+
+.txt2 {
+    position: absolute;
+    width: 430px;
+    height: 144px;
+    left: 0px;
+    top: 236px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #4C4C4C;
+}
+
+.our-pets {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    width: 1280px;
+    height: 877px;
+    background: #F6F6F6;
+}
+
+.slider {
+    position: absolute;
+    width: 1200px;
+    height: 435px;
+    left: calc(50% - 1200px/2);
+    top: 150px;
+    /* border: 2px solid blue; */
+    display: flex;
+}
+
+.arrows {
+    width: 100%;
+    height: 52px;
+    /* border: 2px solid red; */
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftPointer {
+    align-items: center;
+    padding: 23px 19px;
+    /* position: absolute; */
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.leftPointer:hover {
+    background-color: rgba(241, 205, 179, 1);
+}
+
+.rightPointer {
+    align-items: center;
+    padding: 23px 19px;
+    /* position: absolute; */
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.rightPointer:hover {
+    background-color: rgba(241, 205, 179, 1);
+}
+
+.leftPointer img {
+    /* position: absolute; */
+    margin-bottom: 50px;
+    margin-right: 50px;
+    height: 6px;
+    width: 14px;
+    left: 19px;
+    top: 23px;
+    border-radius: 0px;
+}
+
+.rightPointer img {
+    margin-bottom: 35px;
+    margin-right: 10px;
+    height: 6px;
+    width: 14px;
+    left: 33px;
+    top: 29px;
+    border-radius: 0px;
+}
+
+.card1 {
+    position: absolute;
+    width: 270px;
+    height: 435px;
+    left: 105px;
+    top: 0px;
+    background: #FAFAFA;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.card1:hover {
+    transform: scale(1.1);
+}
+
+.card2 {
+    position: absolute;
+    width: 270px;
+    height: 435px;
+    left: 465px;
+    top: 0px;
+    background: #FAFAFA;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.card2:hover {
+    transform: scale(1.1);
+}
+
+.card3 {
+    position: absolute;
+    left: 68.75%;
+    right: 8.75%;
+    top: 0%;
+    bottom: 0%;
+    background: #FAFAFA;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.card3:hover {
+    transform: scale(1.1);
+}
+
+.card1 img {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 37.93%;
+    border-radius: 9px 9px 0px 0px;
+    height: 270px;
+    width: 270px;
+}
+
+.card1 h3 {
+    position: absolute;
+    width: 74px;
+    height: 23px;
+    left: 98px;
+    top: 300px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.catButton {
+    position: absolute;
+    height: 52px;
+    width: 187px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    margin-top: 353px;
+    margin-left: 41.5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.catButton:hover {
+    background-color: #F1CDB3;
+    border: none;
+}
+
+.catButton p {
+    position: static;
+    left: 24.06%;
+    right: 24.06%;
+    top: 28.85%;
+    bottom: 28.85%;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 50%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.card2 img {
+    height: 270px;
+    width: 270px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 37.93%;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.card2 h3 {
+    position: absolute;
+    width: 83px;
+    height: 23px;
+    left: 94px;
+    top: 300px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.puppyButton {
+    position: absolute;
+    height: 52px;
+    width: 187px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    margin-top: 353px;
+    margin-left: 41.5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.puppyButton:hover {
+    background-color: #F1CDB3;
+    border: none;
+}
+
+.puppyButton p {
+    position: static;
+    left: 24.06%;
+    right: 24.06%;
+    top: 28.85%;
+    bottom: 28.85%;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 50%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.card3 img {
+    height: 270px;
+    width: 270px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 37.93%;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.card3 h3 {
+    position: absolute;
+    width: 68px;
+    height: 23px;
+    left: 101px;
+    top: 300px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.dogButton {
+    position: absolute;
+    height: 52px;
+    width: 187px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    margin-top: 353px;
+    margin-left: 41.5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dogButton:hover {
+    background-color: #F1CDB3;
+    border: none;
+}
+
+.dogButton p {
+    position: static;
+    left: 24.06%;
+    right: 24.06%;
+    top: 28.85%;
+    bottom: 28.85%;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 50%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.testButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    position: absolute;
+    width: 261px;
+    height: 52px;
+    left: 510px;
+    top: 670px;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.testButton:hover {
+    background-color: #efb487;
+}
+
+.testButton p {
+    position: static;
+    left: 24.06%;
+    right: 24.06%;
+    top: 28.85%;
+    bottom: 28.85%;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 10%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.helper-page {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    width: 1280px;
+    height: 611px;
+}
+
+.help-content {
+    position: absolute;
+    width: 1200px;
+    height: 431px;
+    left: calc(50% - 1200px/2);
+    top: 80px;
+    /* border: 2px solid black; */
+}
+
+.help-content h2 {
+    position: absolute;
+    width: 308px;
+    height: 90px;
+    left: 446px;
+    top: 0px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #545454;
+}
+
+
+/* create list */
+
+.list {
+    position: absolute;
+    margin-left: 80px;
+}
+
+.list div {
+    transition: 0.5s;
+}
+
+.list div:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.pet-food {
+    position: absolute;
+    width: 82px;
+    height: 113px;
+    left: 0px;
+    top: 150px;
+}
+
+.pet-food img {
+    position: absolute;
+    left: 19.12%;
+    right: 10.12%;
+    top: 0%;
+    bottom: 0%;
+    color: #F1CDB3;
+}
+
+.pet-food h4 {
+    position: absolute;
+    width: 82px;
+    height: 23px;
+    left: 10px;
+    top: 50px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.transportation {
+    position: absolute;
+    width: 150px;
+    height: 113px;
+    left: 202px;
+    top: 150px;
+}
+
+.transportation img {
+    position: absolute;
+    width: 59.95px;
+    height: 70px;
+    left: calc(50% - 59.95px/2 - 0.05px);
+    top: calc(27% - 60px/2);
+    color: #F1CDB3;
+}
+
+.transportation h4 {
+    position: absolute;
+    width: 150px;
+    height: 23px;
+    left: 18px;
+    top: 51px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.toys {
+    position: absolute;
+    width: 60px;
+    height: 113px;
+    left: 472px;
+    top: 150px;
+}
+
+.toys img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 60px/2);
+    top: calc(35% - 60px/2);
+    color: #F1CDB3;
+}
+
+.toys h4 {
+    position: absolute;
+    width: 46px;
+    height: 23px;
+    left: 10px;
+    top: 52px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.bowls-cups {
+    position: absolute;
+    width: 153px;
+    height: 113px;
+    left: 652px;
+    top: 150px;
+}
+
+.bowls-cups img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 60px/2);
+    top: calc(33% - 56.82px/2 + 0.41px);
+    color: #F1CDB3;
+}
+
+.bowls-cups h4 {
+    position: absolute;
+    width: 153px;
+    height: 23px;
+    left: 20px;
+    top: 52px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.shampoos {
+    position: absolute;
+    width: 101px;
+    height: 113px;
+    left: 925px;
+    top: 150px;
+}
+
+.shampoos img {
+    position: absolute;
+    width: 31.3px;
+    height: 60px;
+    left: calc(50% - 31.3px/2 - 0.7px);
+    top: calc(37% - 60px/2);
+    color: #F1CDB3;
+}
+
+.shampoos h4 {
+    position: absolute;
+    width: 101px;
+    height: 23px;
+    left: 15px;
+    top: 53px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.vitamins {
+    position: absolute;
+    width: 89px;
+    height: 113px;
+    left: 84px;
+    top: 318px;
+}
+
+.vitamins img {
+    position: absolute;
+    width: 60px;
+    height: 54.16px;
+    left: calc(50% - 60px/2);
+    top: calc(30% - 54.16px/2 + 0.08px);
+    color: #F1CDB3;
+}
+
+.vitamins h4 {
+    position: absolute;
+    width: 89px;
+    height: 23px;
+    left: 10px;
+    top: 58px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.medicines {
+    position: absolute;
+    width: 101px;
+    height: 113px;
+    left: 293px;
+    top: 318px;
+}
+
+.medicines img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: calc(55% - 60px/2 - 0px);
+    top: calc(35% - 60px/2);
+    color: #F1CDB3;
+}
+
+.medicines h4 {
+    position: absolute;
+    width: 101px;
+    height: 23px;
+    left: 10px;
+    top: 58px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.collars-leashes {
+    position: absolute;
+    width: 165px;
+    height: 113px;
+    left: 514px;
+    top: 318px;
+}
+
+.collars-leashes img {
+    position: absolute;
+    width: 60px;
+    height: 54px;
+    left: 32%;
+    top: 10px;
+    color: #F1CDB3;
+}
+
+.collars-leashes h4 {
+    position: absolute;
+    width: 165px;
+    height: 23px;
+    left: calc(10% - 165px/2 + 83.5px);
+    top: 58px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.sleeping-areas {
+    position: absolute;
+    width: 143px;
+    height: 113px;
+    left: 799px;
+    top: 318px;
+}
+
+.sleeping-areas img {
+    position: absolute;
+    width: 56.29px;
+    height: 65px;
+    left: calc(50% - 56.29px/2 + 0.29px);
+    top: calc(30% - 60px/2);
+    color: #F1CDB3;
+}
+
+.sleeping-areas h4 {
+    position: absolute;
+    width: 143px;
+    height: 23px;
+    left: 19px;
+    top: 58px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+
+/* .list div {
+    border: 2px solid black;
+} */
+
+.donation-page {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    width: 1280px;
+    height: 462px;
+}
+
+.donation-content {
+    position: absolute;
+    width: 915px;
+    height: 282px;
+    left: calc(50% - 915px/2 + 0.5px);
+    top: 80px;
+    /* border: 2px solid gold; */
+}
+
+.donation-content img {
+    position: absolute;
+    width: 505px;
+    height: 261px;
+    left: 0px;
+    top: 11px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.donation-content img:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    position: absolute;
+    width: 380px;
+    height: 282px;
+    left: 535px;
+    top: 0px;
+    /* border: 1px solid black; */
+}
+
+.contact h3 {
+    position: absolute;
+    width: 300px;
+    height: 90px;
+    left: 0px;
+    top: -40px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.contact h5 {
+    position: absolute;
+    width: 317px;
+    height: 17px;
+    left: 0px;
+    top: 80px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.credit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    position: absolute;
+    width: 349px;
+    height: 43px;
+    left: 0px;
+    top: 147px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.credit-card:hover {
+    transform: scale(1.1);
+}
+
+.credit-card h4 {
+    position: absolute;
+    width: 284px;
+    height: 23px;
+    left: 60px;
+    top: -15px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.credit-card a {
+    text-decoration: none;
+    color: #545454;
+}
+
+.credit-card img {
+    position: absolute;
+    width: 30px;
+    height: 23px;
+    left: 15px;
+    top: 10px;
+    color: #292929;
+}
+
+.contact p {
+    position: absolute;
+    width: 380px;
+    height: 72px;
+    left: 0px;
+    top: 200px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #B2B2B2;
+}
+
+.footer {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    width: 1280px;
+    height: 350px;
+}
+
+.foot-back {
+    position: absolute;
+    width: 1280px;
+    height: 350px;
+    margin-top: 0;
+}
+
+.footer-content {
+    position: absolute;
+    width: 1200px;
+    height: 310px;
+    left: 40px;
+    top: 40px;
+    /* border: 2px solid white; */
+}
+
+.contacts {
+    position: absolute;
+    width: 278px;
+    height: 234px;
+    left: 0px;
+    top: 16px;
+    /* border: 1px solid red; */
+}
+
+.contacts h3 {
+    position: absolute;
+    width: 278px;
+    height: 90px;
+    left: calc(50% - 278px/2 - 0px);
+    top: -35px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.mail-icon {
+    position: absolute;
+    width: 40px;
+    height: 26px;
+    left: calc(50% - 278px/2 - 0px);
+    top: calc(60% - 26px/2 - 0px);
+    color: #F1CDB3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.mail-icon:hover {
+    transform: scale(1.3);
+}
+
+.shelter-mail {
+    position: absolute;
+    width: 191px;
+    height: 23px;
+    left: calc(50% - 191px/2 + 16.5px);
+    top: 101px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.phone-icon {
+    position: absolute;
+    width: 40px;
+    height: 32px;
+    left: 0px;
+    top: 190px;
+    color: #F1CDB3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.phone-icon:hover {
+    transform: scale(1.3);
+}
+
+.phone-number {
+    position: absolute;
+    width: 200px;
+    height: 23px;
+    left: calc(50% - 179px/2 + 10.5px);
+    top: 167px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.locations {
+    position: absolute;
+    width: 302px;
+    height: 234px;
+    left: 438px;
+    top: 16px;
+    /* border: 1px solid white; */
+}
+
+.locations h3 {
+    position: absolute;
+    width: 270px;
+    height: 90px;
+    left: calc(50% - 270px/2 - 15px);
+    top: -35px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.pin-icon1 {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    left: 0px;
+    top: calc(60% - 26px/2 - 0px);
+    color: #F1CDB3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pin-icon1:hover {
+    transform: scale(1.3);
+}
+
+.central-street {
+    position: absolute;
+    width: 260px;
+    height: 46px;
+    left: calc(50% - 260px/2 + 21px);
+    top: 95px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.pin-icon2 {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    left: 0px;
+    top: 189px;
+    color: #F1CDB3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pin-icon2:hover {
+    transform: scale(1.3);
+}
+
+.park-number {
+    position: absolute;
+    width: 260px;
+    height: 23px;
+    left: calc(50% - 260px/2 + 21px);
+    top: 165px;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.foot-puppy {
+    position: absolute;
+    width: 300px;
+    height: 287px;
+    left: calc(65% - 300px/2 + 450px);
+    top: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.foot-puppy:hover {
+    transform: scale(1.1);
+}
