@@ -1,1 +1,1 @@
-https://levani49.github.io/shelter/
+https://levani49.github.io/shelter/main/
