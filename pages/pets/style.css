@@ -209,11 +209,6 @@ body {
     border-style: none;
 }
 
-.one:hover {
-    cursor: pointer;
-    background-color: #ec995f;
-}
-
 .one p {
     font-family: 'Georgia', sans-serif;
 }
