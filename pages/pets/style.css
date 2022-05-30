@@ -77,14 +77,41 @@ body {
     transform: scale(1.1);
 }
 
-.pets {
-    margin-top: 0;
-    background-color: #F6F6F6;
+
+/* create navigation responsive(768px) */
+
+@media all and (max-width: 768px) {
+    .navigation ul {
+        margin-right: 220px;
+    }
+    .logo-side {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 49px;
+    right: 49px;
+    width: 30px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10px;
 }
 
 .heads {
     display: flex;
     justify-content: center;
+    margin-left: 150px;
 }
 
 .heading1 {
@@ -105,6 +132,27 @@ body {
     font-size: 25px;
     margin-top: 15%;
     margin-left: -20%;
+}
+
+
+/* create navigation responsive(320px) */
+
+@media all and (max-width: 320px) {
+    .hamburger-menu {
+        display: flex;
+        right: -450px;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .navigation {
+        margin-left: 500px;
+    }
+}
+
+.pets {
+    margin-top: 0;
+    background-color: #F6F6F6;
 }
 
 .grid-cards {
@@ -167,6 +215,43 @@ body {
 
 .grid-cards div:hover {
     transform: scale(1.1);
+}
+
+
+/* create animals cards responsive(768px) */
+
+@media all and (max-width: 768px) {
+    .grid-cards {
+        grid-template-columns: repeat(2, 270px);
+        grid-template-rows: repeat(3, 435px);
+        grid-column-gap: 40px;
+        grid-row-gap: 30px;
+    }
+    .seventh {
+        display: none !important;
+    }
+    .eighth {
+        display: none !important;
+    }
+}
+
+
+/* create animals cards responsive(320px) */
+
+@media all and (max-width: 320px) {
+    .grid-cards {
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: repeat(3, 435px);
+    }
+    .fourth {
+        display: none !important;
+    }
+    .fifth {
+        display: none !important;
+    }
+    .sixth {
+        display: none !important;
+    }
 }
 
 .numbers-nav {
@@ -242,42 +327,22 @@ body {
 }
 
 .footer {
-    position: relative;
-    margin-top: 100px;
+    width: 1280px;
+    margin: 0;
     padding: 0;
-    width: 1280px;
-    height: 350px;
-}
-
-.foot-back {
-    position: absolute;
-    width: 1280px;
-    height: 350px;
-    margin-top: 0;
-}
-
-.footer-content {
-    position: absolute;
-    width: 1200px;
-    height: 310px;
-    left: 40px;
-    top: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../../assets/images/footer-gradient-background.png);
+    margin-top: 100px;
 }
 
 .contacts {
-    position: absolute;
-    width: 278px;
-    height: 234px;
-    left: 0px;
-    top: 16px;
+    /* width: 278px;
+    height: 234px; */
+    margin-left: 40px;
 }
 
 .contacts h3 {
-    position: absolute;
-    width: 278px;
-    height: 90px;
-    left: calc(50% - 278px/2 - 0px);
-    top: -35px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -287,12 +352,11 @@ body {
     color: #FFFFFF;
 }
 
+.contacts h4 {
+    margin-right: 20px;
+}
+
 .mail-icon {
-    position: absolute;
-    width: 40px;
-    height: 26px;
-    left: calc(50% - 278px/2 - 0px);
-    top: calc(60% - 26px/2 - 0px);
     color: #F1CDB3;
     cursor: pointer;
     transition: 0.5s;
@@ -303,11 +367,6 @@ body {
 }
 
 .shelter-mail {
-    position: absolute;
-    width: 191px;
-    height: 23px;
-    left: calc(50% - 191px/2 + 16.5px);
-    top: 101px;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -317,12 +376,21 @@ body {
     color: #F1CDB3;
 }
 
+.mail-contacts1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mail-contacts2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .phone-icon {
-    position: absolute;
     width: 40px;
     height: 32px;
-    left: 0px;
-    top: 190px;
     color: #F1CDB3;
     cursor: pointer;
     transition: 0.5s;
@@ -333,11 +401,6 @@ body {
 }
 
 .phone-number {
-    position: absolute;
-    width: 200px;
-    height: 23px;
-    left: calc(50% - 179px/2 + 10.5px);
-    top: 167px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -348,19 +411,10 @@ body {
 }
 
 .locations {
-    position: absolute;
-    width: 302px;
-    height: 234px;
-    left: 438px;
-    top: 16px;
+    margin-top: -15px;
 }
 
 .locations h3 {
-    position: absolute;
-    width: 270px;
-    height: 90px;
-    left: calc(50% - 270px/2 - 15px);
-    top: -35px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -371,11 +425,6 @@ body {
 }
 
 .pin-icon1 {
-    position: absolute;
-    width: 22px;
-    height: 32px;
-    left: 0px;
-    top: calc(60% - 26px/2 - 0px);
     color: #F1CDB3;
     cursor: pointer;
     transition: 0.5s;
@@ -386,11 +435,8 @@ body {
 }
 
 .central-street {
-    position: absolute;
     width: 260px;
     height: 46px;
-    left: calc(50% - 260px/2 + 21px);
-    top: 95px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -401,11 +447,8 @@ body {
 }
 
 .pin-icon2 {
-    position: absolute;
     width: 22px;
     height: 32px;
-    left: 0px;
-    top: 189px;
     color: #F1CDB3;
     cursor: pointer;
     transition: 0.5s;
@@ -416,11 +459,6 @@ body {
 }
 
 .park-number {
-    position: absolute;
-    width: 260px;
-    height: 23px;
-    left: calc(50% - 260px/2 + 21px);
-    top: 165px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -428,18 +466,74 @@ body {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    margin-right: 50px;
+}
+
+.central1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.central2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locations h4 {
+    margin-left: 30px;
 }
 
 .foot-puppy {
-    position: absolute;
-    width: 300px;
-    height: 287px;
-    left: calc(65% - 300px/2 + 450px);
-    top: 0px;
     cursor: pointer;
     transition: 0.5s;
+    margin-top: 40px;
 }
 
 .foot-puppy:hover {
     transform: scale(1.1);
+}
+
+
+/* create footer block responsive(768px) */
+
+@media all and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+    .foot-puppy {
+        order: 2;
+        width: 300px;
+        height: 310px;
+    }
+    .contacts h4 {
+        margin-right: 970px;
+    }
+    .locations {
+        margin-top: -315px;
+        margin-left: 500px;
+    }
+    .locations h3 {
+        margin-left: 50px;
+    }
+    .central-street {
+        margin-right: 500px;
+    }
+    .park-number {
+        margin-right: 500px;
+    }
+    .foot-puppy {
+        margin-left: 234px;
+        margin-right: 234px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .numbers-nav {
+        justify-content: space-around;
+    }
+    .footer {
+        flex-direction: column;
+    }
 }
