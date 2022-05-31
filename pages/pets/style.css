@@ -77,19 +77,6 @@ body {
     transform: scale(1.1);
 }
 
-
-/* create navigation responsive(768px) */
-
-@media all and (max-width: 768px) {
-    .navigation ul {
-        margin-right: 220px;
-    }
-    .logo-side {
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-}
-
 .hamburger-menu {
     position: absolute;
     top: 49px;
@@ -131,22 +118,71 @@ body {
     font-style: normal;
     font-size: 25px;
     margin-top: 15%;
-    margin-left: -20%;
+    margin-left: -22%;
+}
+
+
+/* create navigation responsive(768px) */
+
+@media all and (max-width: 768px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .navigation ul {
+        margin-right: 40%;
+    }
+    .logo-side {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .heading1 {
+        margin-left: -5px;
+        margin-top: 10%;
+    }
+    .heading2 {
+        margin-top: 15%;
+        margin-left: -260px;
+    }
 }
 
 
 /* create navigation responsive(320px) */
 
 @media all and (max-width: 320px) {
+    .logo-side h1 {
+        margin-left: -470px;
+    }
+    .logo-side h4 {
+        margin-left: -470px;
+    }
     .hamburger-menu {
         display: flex;
-        right: -450px;
+        right: 19%;
+        margin-top: 7px;
     }
     .navigation ul {
         display: none;
     }
     .navigation {
         margin-left: 500px;
+    }
+    .heads {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: -50px;
+        width: 550px;
+        height: 64px;
+    }
+    .heading1 {
+        margin-left: -115px;
+        margin-top: 10%;
+        margin-bottom: 70px;
+    }
+    .heading2 {
+        margin-top: 15%;
+        margin-left: -600px;
     }
 }
 
@@ -242,6 +278,7 @@ body {
     .grid-cards {
         grid-template-columns: repeat(1, 270px);
         grid-template-rows: repeat(3, 435px);
+        margin-right: 35px;
     }
     .fourth {
         display: none !important;
@@ -251,6 +288,9 @@ body {
     }
     .sixth {
         display: none !important;
+    }
+    .pets {
+        margin-right: -35px;
     }
 }
 
@@ -532,6 +572,7 @@ body {
 @media all and (max-width: 320px) {
     .numbers-nav {
         justify-content: space-around;
+        margin-left: -10px;
     }
     .footer {
         flex-direction: column;
