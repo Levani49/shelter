@@ -367,53 +367,35 @@ body {
 }
 
 .footer {
-    width: 1280px;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    background-image: url(../../assets/images/footer-gradient-background.png);
-    margin-top: 100px;
+    align-items: center;
+    /* background-image: url(../../assets/images/footer-gradient-background.png); */
+    position: relative;
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+    margin-top: 40px;
 }
 
 .contacts {
-    /* width: 278px;
-    height: 234px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     margin-left: 40px;
+    margin-top: 56px;
+    margin-bottom: 60px;
 }
 
 .contacts h3 {
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-}
-
-.contacts h4 {
-    margin-right: 20px;
-}
-
-.mail-icon {
-    color: #F1CDB3;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.mail-icon:hover {
-    transform: scale(1.3);
-}
-
-.shelter-mail {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: #F1CDB3;
 }
 
 .mail-contacts1 {
@@ -428,12 +410,35 @@ body {
     align-items: center;
 }
 
+.shelter-mail {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    margin-left: 20px;
+}
+
+.mail-icon {
+    color: #F1CDB3;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: -20px;
+}
+
+.mail-icon:hover {
+    transform: scale(1.3);
+}
+
 .phone-icon {
     width: 40px;
     height: 32px;
     color: #F1CDB3;
     cursor: pointer;
     transition: 0.5s;
+    margin-left: -35px;
 }
 
 .phone-icon:hover {
@@ -448,20 +453,36 @@ body {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    margin-left: 20px;
 }
 
 .locations {
-    margin-top: -15px;
+    margin-top: 25px;
+    margin-right: 400px;
 }
 
 .locations h3 {
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+}
+
+.central1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -10px;
+}
+
+.central2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .pin-icon1 {
@@ -475,8 +496,6 @@ body {
 }
 
 .central-street {
-    width: 260px;
-    height: 46px;
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -484,6 +503,7 @@ body {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    margin-right: 25px;
 }
 
 .pin-icon2 {
@@ -507,74 +527,79 @@ body {
     letter-spacing: 0.06em;
     color: #F1CDB3;
     margin-right: 50px;
-}
-
-.central1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.central2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.locations h4 {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .foot-puppy {
+    width: 300px;
+    height: 310px;
     cursor: pointer;
     transition: 0.5s;
     margin-top: 40px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
 }
 
 .foot-puppy:hover {
     transform: scale(1.1);
 }
 
-
-/* create footer block responsive(768px) */
-
 @media all and (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-    }
     .foot-puppy {
-        order: 2;
-        width: 300px;
-        height: 310px;
+        right: 300px;
+        bottom: 0;
+        width: 230px;
+        height: 240px;
     }
-    .contacts h4 {
-        margin-right: 970px;
+    .contacts {
+        justify-content: flex-start;
+        margin-left: 80px;
+        margin-top: 0px;
+        margin-bottom: 260px;
+    }
+    .contacts h3 {
+        font-size: 27px;
     }
     .locations {
-        margin-top: -315px;
-        margin-left: 500px;
+        margin-top: -200px;
+        margin-right: 10px;
     }
     .locations h3 {
-        margin-left: 50px;
-    }
-    .central-street {
-        margin-right: 500px;
-    }
-    .park-number {
-        margin-right: 500px;
-    }
-    .foot-puppy {
-        margin-left: 234px;
-        margin-right: 234px;
+        font-size: 27px;
+        line-height: 130%;
     }
 }
 
 @media all and (max-width: 320px) {
-    .numbers-nav {
-        justify-content: space-around;
-        margin-left: -10px;
-    }
     .footer {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .foot-puppy {
+        right: 30px;
+        bottom: -1px;
+        width: 260px;
+        height: 269px;
+    }
+    .contacts {
+        justify-content: flex-start;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+    .locations {
+        margin-top: 0px;
+        margin-bottom: 250px;
+        margin-left: 20px;
+    }
+    .central-street {
+        margin-right: 0px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    .locations h3 {
+        margin-left: 10px;
     }
 }
