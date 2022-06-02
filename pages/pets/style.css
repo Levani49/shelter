@@ -129,20 +129,39 @@ body {
         max-width: 100%;
         overflow-x: hidden;
     }
-    .navigation ul {
-        margin-right: 40%;
+    .links ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        margin-right: 450px;
+        margin-top: 60px;
     }
-    .logo-side {
-        margin-top: 20px;
-        margin-left: 30px;
+    .links ul li {
+        list-style: none;
+        padding: 0.1rem 0.7rem;
+        align-items: center;
+        right: 95px;
+        top: 16px;
+        font-family: 'Georgia', sans-serif;
+    }
+    .links ul li a {
+        color: rgb(46, 43, 43);
+        display: block;
+        text-decoration: none;
+        padding: 0.2rem;
+    }
+    .links ul li a:hover {
+        color: rgba(255, 255, 255, 0.635);
+        text-shadow: 2px 2px rgba(255, 0, 0, 0.377);
     }
     .heading1 {
-        margin-left: -5px;
+        font-size: 25px;
+        margin-left: -15%;
         margin-top: 10%;
     }
     .heading2 {
         margin-top: 15%;
-        margin-left: -260px;
+        margin-left: -42%;
     }
 }
 
@@ -150,22 +169,33 @@ body {
 /* create navigation responsive(320px) */
 
 @media all and (max-width: 320px) {
-    .logo-side h1 {
-        margin-left: -470px;
-    }
-    .logo-side h4 {
-        margin-left: -470px;
-    }
     .hamburger-menu {
         display: flex;
-        right: 19%;
+        right: 5%;
         margin-top: 7px;
     }
-    .navigation ul {
+    .links {
         display: none;
     }
+    .bar {
+        background-color: rgba(0, 0, 0, 1);
+    }
     .navigation {
-        margin-left: 500px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links ul {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 87px;
+        background-color: rgba(224, 221, 221, 0.6);
+        margin-left: 160px;
+    }
+    .links li {
+        text-align: right;
+    }
+    .links.active {
+        display: flex;
     }
     .heads {
         display: flex;
@@ -372,7 +402,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-image: url(../../assets/images/footer-gradient-background.png); */
     position: relative;
     background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
     margin-top: 40px;
