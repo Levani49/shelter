@@ -10,12 +10,14 @@
 body {
     margin: 0 auto;
     padding: 0;
-    width: 1280px;
+    /* width: 1280px; */
     font-family: 'Georgia';
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .start-screen {
-    width: 1280px;
+    /* width: 1280px; */
     background-image: url(../../assets/images/start-screen-background.jpg);
     margin-top: -20px;
 }
@@ -174,18 +176,30 @@ body {
 }
 
 
-/* create first block responsive (768px) */
+/* create first block responsive (1280px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     body {
         max-width: 100%;
         overflow-x: hidden;
     }
+    .hamburger-menu {
+        display: flex;
+        right: 35%;
+        margin-top: 25px;
+    }
+    .links {
+        display: none;
+    }
+    .bar {
+        background-color: rgba(241, 205, 179, 1);
+    }
     .navigation {
         margin-top: -30px;
     }
-    .links {
-        margin-right: 455px;
+    .logo {
+        margin-top: 60px;
+        margin-left: 70px;
     }
     .only-house {
         flex-direction: column;
@@ -201,7 +215,7 @@ body {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin-left: 154px;
+        margin-left: 554px;
         margin-top: 150px;
     }
     .text-wrapper h2 {
@@ -220,7 +234,7 @@ body {
     .people-house img {
         width: 569px;
         height: 593px;
-        margin-left: 240px;
+        margin-left: 400px;
         margin-right: 30px;
         margin-top: 100px;
     }
@@ -233,12 +247,16 @@ body {
 }
 
 
-/* create first block responsive(320px) */
+/* create first block responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     .hamburger-menu {
         display: flex;
-        right: 5%;
+        right: 35%;
         margin-top: 25px;
     }
     .links {
@@ -263,6 +281,10 @@ body {
     }
     .links.active {
         display: flex;
+    }
+    .text-wrapper {
+        margin-left: 400px;
+        margin-top: 150px;
     }
     .text-wrapper h2 {
         width: 260px;
@@ -290,14 +312,14 @@ body {
     .people-house img {
         width: 260px;
         height: 271.77px;
-        margin-right: 30px;
+        margin-right: 3px;
         margin-top: -50px;
-        margin-left: -120px;
+        margin-left: 20px;
     }
 }
 
 .about-page {
-    width: 1240px;
+    /* width: 1240px; */
     margin: 0;
     padding: 0;
 }
@@ -363,15 +385,16 @@ body {
 }
 
 
-/* create about page responsive(768px) */
+/* create about page responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .about-content {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        margin-right: 40%;
+        margin-right: 0;
+        margin-left: 35%;
     }
     .about-content img {
         order: 2;
@@ -381,9 +404,9 @@ body {
 }
 
 
-/* create about page responsive(320px) */
+/* create about page responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     body {
         max-width: 100%;
         overflow-x: hidden;
@@ -405,12 +428,12 @@ body {
 .our-pets {
     margin: 0;
     padding: 60px 0;
-    width: 1280px;
+    /* width: 1279px; */
     background-color: #F6F6F6;
 }
 
 .slider {
-    width: 1280px;
+    /* width: 1279px; */
     position: relative;
 }
 
@@ -517,6 +540,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    margin-left: 50%;
 }
 
 .card1 {
@@ -529,6 +553,58 @@ body {
 
 .card1:hover {
     transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: white;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.info {
+    margin-left: 10px;
+}
+
+.pet-img {
+    width: 50%;
+    height: 100%;
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #F1CDB3;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
 }
 
 .card2 {
@@ -697,8 +773,8 @@ body {
     border-radius: 100px;
     border-style: none;
     cursor: pointer;
-    margin-left: 510px;
-    margin-top: 60px;
+    margin-left: 40%;
+    margin-top: 300px;
     margin-bottom: 100px;
 }
 
@@ -717,9 +793,9 @@ body {
 }
 
 
-/* create our pets page responsive(768px) */
+/* create our pets page responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .heads {
         display: flex;
         justify-content: center;
@@ -727,42 +803,44 @@ body {
     }
     .leftPointer {
         top: 350px;
-        left: 2px;
+        left: 10%;
     }
     .rightPointer {
         top: 350px;
-        left: 677px;
+        /* left: 1177px; */
+        right: 10%;
     }
     .card3 {
         display: none !important;
     }
     .card1 {
-        margin-right: 20%;
-        margin-left: 13%;
+        margin-right: 10%;
+        margin-left: 23%;
     }
     .card2 {
-        margin-right: 54%;
-        margin-left: -19%;
+        margin-right: 24%;
+        margin-left: -7%;
     }
     .heading1 {
-        margin-left: -35%;
+        margin-left: -4%;
         margin-top: 10px;
     }
     .heading2 {
         margin-top: 55px;
-        margin-left: -20%;
+        margin-left: -33%;
     }
     .testButton {
-        margin-left: 260px;
+        /* margin-left: 490px; */
+        margin-left: 37%;
         margin-top: 60px;
         margin-bottom: 100px;
     }
 }
 
 
-/* create our pets page responsive(320px) */
+/* create our pets page responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .card2 {
         display: none !important;
     }
@@ -771,14 +849,14 @@ body {
     }
     .card1 {
         margin-left: 0px;
-        margin-right: 76%;
+        margin-right: 10%;
     }
     .testButton {
-        margin-left: 25px;
+        margin-left: 25%;
         margin-top: 130px;
     }
     .leftPointer {
-        left: 3%;
+        left: 30%;
         top: 631px;
     }
     .leftPointer img {
@@ -789,18 +867,18 @@ body {
         position: absolute;
     }
     .rightPointer {
-        left: 15%;
+        left: 50%;
         top: 631px;
     }
     .heading1 {
-        margin-left: -55%;
-        margin-right: 3%;
+        margin-left: 0%;
+        margin-right: 1%;
         margin-top: 10px;
     }
     .heading2 {
         margin-top: 55px;
         margin-right: 14%;
-        margin-left: -25%;
+        margin-left: -35%;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -809,7 +887,7 @@ body {
 .helper-page {
     margin: 0;
     padding: 0;
-    width: 1280px;
+    width: 1279px;
 }
 
 .h2-1 {
@@ -931,9 +1009,9 @@ body {
 }
 
 
-/* create helper page responsive(768px) */
+/* create helper page responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .list {
         margin-top: 60px;
         margin-bottom: 100px;
@@ -943,7 +1021,7 @@ body {
         grid-column-gap: 90px;
         grid-row-gap: 55px;
         justify-content: center;
-        margin-right: 35%;
+        margin-right: 10%;
     }
     .vitamins {
         margin-left: 10px;
@@ -962,18 +1040,18 @@ body {
     }
     .h2-1 {
         margin-top: 80px;
-        margin-left: 230px;
+        margin-left: 35%;
     }
     .h2-2 {
         margin-top: -20px;
-        margin-left: 290px;
+        margin-left: 39%;
     }
 }
 
 
-/* create helper page responsive(320px) */
+/* create helper page responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .list {
         grid-template-columns: repeat(2, 130px);
         grid-template-rows: repeat(5, 87px);
@@ -985,19 +1063,20 @@ body {
     .h2-1 {
         margin-top: 42px;
         letter-spacing: 0.01em;
-        margin-left: 5px;
+        margin-left: 2%;
     }
     .h2-2 {
-        margin-top: 5px;
+        margin-top: 2%;
         letter-spacing: 0.01em;
         margin-left: 65px;
     }
 }
 
 .donation-page {
-    margin-top: 0;
+    margin: 0;
     padding: 0;
-    width: 1280px;
+    /* width: 1279px; */
+    width: 100vw;
     background-color: #F6F6F6;
     display: flex;
     justify-content: space-around;
@@ -1121,27 +1200,27 @@ body {
 }
 
 
-/* create donation page responsive(768px) */
+/* create donation page responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .donation-page {
         flex-direction: column;
     }
     .coccer {
         order: 2;
         margin-bottom: 100px;
-        margin-left: 150px;
+        margin-left: 25%;
         margin-top: 60px;
     }
     .contact {
-        margin-right: 33%;
+        margin-right: 0px;
     }
 }
 
 
-/* create donation page responsive(320px) */
+/* create donation page responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .contact h3 {
         margin-left: -50px;
     }
@@ -1159,7 +1238,7 @@ body {
         height: 135.2px;
     }
     .contact {
-        margin-right: 71%;
+        margin-right: 10%;
     }
 }
 
@@ -1340,9 +1419,20 @@ body {
     transform: scale(1.1);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279) {
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-top: 56px;
+        margin-bottom: 60px;
+    }
     .foot-puppy {
-        right: 300px;
+        right: 30%;
         bottom: 0;
         width: 230px;
         height: 240px;
@@ -1366,7 +1456,7 @@ body {
     }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .footer {
         flex-direction: column;
         justify-content: center;
@@ -1387,7 +1477,7 @@ body {
     .locations {
         margin-top: 0px;
         margin-bottom: 250px;
-        margin-left: 20px;
+        margin-left: 80%;
     }
     .central-street {
         margin-right: 0px;
