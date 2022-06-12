@@ -122,9 +122,9 @@ body {
 }
 
 
-/* create navigation responsive(768px) */
+/* create navigation responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     body {
         max-width: 100%;
         overflow-x: hidden;
@@ -166,9 +166,9 @@ body {
 }
 
 
-/* create navigation responsive(320px) */
+/* create navigation responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .hamburger-menu {
         display: flex;
         right: 5%;
@@ -206,13 +206,13 @@ body {
         height: 64px;
     }
     .heading1 {
-        margin-left: -115px;
+        margin-left: 200px;
         margin-top: 10%;
         margin-bottom: 70px;
     }
     .heading2 {
         margin-top: 15%;
-        margin-left: -600px;
+        margin-left: -270px;
     }
 }
 
@@ -284,9 +284,9 @@ body {
 }
 
 
-/* create animals cards responsive(768px) */
+/* create animals cards responsive(1279px) */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .grid-cards {
         grid-template-columns: repeat(2, 270px);
         grid-template-rows: repeat(3, 435px);
@@ -302,9 +302,9 @@ body {
 }
 
 
-/* create animals cards responsive(320px) */
+/* create animals cards responsive(768px) */
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .grid-cards {
         grid-template-columns: repeat(1, 270px);
         grid-template-rows: repeat(3, 435px);
@@ -574,7 +574,7 @@ body {
     transform: scale(1.1);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1279px) {
     .foot-puppy {
         right: 300px;
         bottom: 0;
@@ -600,7 +600,7 @@ body {
     }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
     .footer {
         flex-direction: column;
         justify-content: center;

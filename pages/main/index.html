@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -64,8 +65,8 @@
     </div>
 
     <!-- create our pets page -->
-    <div class="our-pets" id="Pets">
-        <div class="slider">
+    <div class="swiper mySwiper our-pets" id="Pets">
+        <div class="swiper-wrapper slider">
             <div class="heads">
                 <h3 class="heading1">Our friends who</h3>
                 <h3 class="heading2">are looking for a house</h3>
@@ -76,25 +77,28 @@
             </div>
 
             <!-- create pets page -->
-            <div class="pets-block">
+            <div class="swiper-slide pets-block">
                 <div class="card1">
                     <img src="../../assets/images/pets-katrine.png">
                     <h3>Katrine</h3>
-                    <button class="catButton"> <p>Learn more</p>  </button>
+                    <button data-modal-target="#modal" class="catButton"> <p>Learn more</p>  </button>
                 </div>
                 <div class="card2">
                     <img src="../../assets/images/pets-jennifer.png">
                     <h3>Jennifer</h3>
-                    <button class="puppyButton"> <p>Learn more</p>  </button>
+                    <button data-modal-target="#modal" class="puppyButton"> <p>Learn more</p>  </button>
                 </div>
                 <div class="card3">
                     <img src="../../assets/images/pets-woody.png">
                     <h3>Woody</h3>
-                    <button class="dogButton"> <p>Learn more</p> </button>
+                    <button data-modal-target="#modal" class="dogButton"> <p>Learn more</p> </button>
                 </div>
             </div>
             <a href="../pets/index.html"> <button class="testButton"> <p>Get to know the rest</p> </button> </a>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 
     <!-- create helper page -->
@@ -195,7 +199,63 @@
 
         <img src="../../assets/images/footer-puppy.png" class="foot-puppy">
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     <script src="script.js"></script>
+    <!-- create popup div -->
+    <div class="modal" id="modal">
+        <img class="pet-img" src="../../assets/images/pets-katrine.png">
+        <div class="info">
+            <h3>Katrine</h3>
+            <h4>Dog - British Shorthair</h4>
+            <p>Katrine is a beautiful girl. She is as soft as the <br> finest velvet with a thick lush fur. Will love <br> you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch
+                into your hands for a deeper relaxations.</p>
+            <ul class="pet-info">
+                <li>Age: 6 months</li>
+                <li>Inoculations: panleukopenia</li>
+                <li>Diseases: none</li>
+                <li>Parasites: none</li>
+            </ul>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <img class="pet-img" src="../../assets/images/pets-jennifer.png">
+        <div class="info">
+            <h3>Jennifer</h3>
+            <h4>Dog - Labrador</h4>
+            <p>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find <br> a new forever home. This girl really enjoys being able to go outside to run and play, but won't <br> hesitate to play up a storm in the house if she has all of
+                her favorite toys.
+            </p>
+            <ul class="pet-info">
+                <li>Age: 2 months</li>
+                <li>Inoculations: panleukopenia</li>
+                <li>Diseases: none</li>
+                <li>Parasites: none</li>
+            </ul>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+    </div>
+    <div class="active" id="overlay"></div>
 </body>
 
 </html>
