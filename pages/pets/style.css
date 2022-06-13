@@ -129,12 +129,13 @@ body {
         max-width: 100%;
         overflow-x: hidden;
     }
-    .links ul {
-        margin: 0;
-        padding: 0;
+    .hamburger-menu {
         display: flex;
-        margin-right: 450px;
-        margin-top: 40px;
+        right: 5%;
+        margin-top: 7px;
+    }
+    .links ul {
+        display: none;
     }
     .links ul li {
         list-style: none;
